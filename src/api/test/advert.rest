@@ -1,0 +1,28 @@
+GET http://localhost:5000/api/ads
+
+###
+
+GET http://localhost:5000/api/ads/1
+
+###
+
+POST http://localhost:5000/api/ads
+Content-Type: application/json 
+
+{
+    "id" : 1,
+    "title"  : "Drink Fresh",
+    "from" : "2023-04-23",
+    "to" : "2023-05-01",
+    "periode" : 12,
+    "media" : "path1",
+    "locations" : [1,2,4]
+}
+
+###
+
+DELETE  http://localhost:5000/api/ads/1
+
+###
+
+Put  http://localhost:5000/api/ads/1
