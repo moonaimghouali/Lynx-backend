@@ -12,6 +12,10 @@ const Location = sequelize.define('Location', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    WilayaId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     }
 
   },{timestamps : false});

@@ -4,7 +4,15 @@ const Location = require("./../models/Location")
 
 const getAllLocations =  async (req, res) => {
   try{
-    const users = await Location.findAll()
+    let wilaya = req.query.wilaya
+    console.log(wilaya)
+    let users 
+    if (wilaya === undefined) {
+      users = await Location.findAll()
+    } else {
+      users = await Location.findAll({where : {WilayaId : wilaya}})
+    }
+    
     res.status(200).send({success : true, data : users})
   }catch(error)
   {
